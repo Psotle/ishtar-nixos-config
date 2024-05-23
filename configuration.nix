@@ -186,6 +186,7 @@
     };
     wayland.windowManager.sway = {
       enable = true;
+      wrapperFeatures.gtk = true;
       config = rec {
         modifier = "Mod4";
         terminal = "alacritty"; 
@@ -228,6 +229,7 @@
     mako
 
     # cli
+    bash
     ctop
     glxinfo
     mesa-demos
@@ -243,6 +245,7 @@
 
     # dev stuff
     pkgs.devenv
+    jetbrains-toolbox
     docker-compose
     protobuf_26
     glibc glibc.dev
@@ -275,6 +278,7 @@
 
   services.openssh.enable = true;
   services.avahi.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   system.autoUpgrade.enable  = true;
   system.copySystemConfiguration = true;
